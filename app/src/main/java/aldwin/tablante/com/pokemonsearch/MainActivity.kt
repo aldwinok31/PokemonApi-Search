@@ -199,7 +199,6 @@ inner class downloader : AsyncTask<Void,Int,Void>(){
         var toast = Toast.makeText(this@MainActivity,"FETCHING POKEMONS",Toast.LENGTH_LONG)
 
         toast.show()
-        pbar!!.visibility = View.VISIBLE
 
         l2.visibility = View.GONE
 
@@ -253,7 +252,7 @@ catch(e:InterruptedException){
         ins = URL(ImageUrlback).openStream()
         mIcon = BitmapFactory.decodeStream(ins)
         imageView2!!.setImageBitmap(mIcon)
-        loadtxt!!.setText(values[0]!!.toString() + " : Available Pokemons " + " \n" + "Loading more...")
+        loadtxt!!.setText(values[0]!!.toString() + " : Available Pokemons " + " \n" + "Downloading more...")
     }
 
     override fun onPostExecute(result: Void?) {
